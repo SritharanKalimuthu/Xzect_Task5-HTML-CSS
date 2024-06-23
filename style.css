@@ -241,7 +241,7 @@ body {
 }
 
 .demo, .cta__wrapper {
-    background: linear-gradient(90deg, rgba(3, 47, 203, 0.81) 24%, rgba(76, 0, 255, 0.48) 60%);
+    background: linear-gradient(to right, #2753ff 0%, #a369ff 100%);
     padding: 5rem;
     position: relative;
     color: #fff;
