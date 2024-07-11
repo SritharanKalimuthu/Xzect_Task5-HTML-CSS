@@ -133,7 +133,7 @@ body {
 }
 
 .services__title, .features__title, .pricing__title, .team__title, .blog__title {
-    font-size: 2rem !important;
+    font-size: 2rem;
     padding: 1rem;
 }
 
@@ -336,7 +336,7 @@ body {
 }
 
 .pricing__box {
-    padding: 3rem 6rem;
+    padding: 3rem 5.5rem;
     border-radius: 5px;
     box-shadow: rgba(27, 27, 27, 0.13) 0px 3px 8px;
 }
@@ -348,6 +348,7 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--text-grey);
+    text-wrap: nowrap;
 }
 
 .pricing__box-icon > img {
@@ -399,7 +400,7 @@ body {
 }
 
 .pricing__box-extension {
-    margin: 1.5rem 0 .8rem;
+    margin: 1.5rem 0;
     font-size: .95rem;
 }
 
@@ -947,6 +948,7 @@ body {
     
     .services__title-section, .features__title-section, .pricing__title-section, .team__title-section, .blog__title-section {
         padding: 1rem;
+        margin-bottom: 3rem;
     }
     
     .services__description, .features__description, .pricing__description, .team__description, .blog__description {
@@ -969,12 +971,15 @@ body {
     }
     
     .feature__list-reverse{
-        margin-bottom: 2rem;
         flex-direction: column-reverse;
     }
     
     .features__content {
         width: auto;
+    }
+
+    .features__content-button{
+        margin-bottom: 3rem;
     }
     
     .features_image-main > img {
@@ -1075,12 +1080,13 @@ body {
     .contact__input-email > input,
     .contact__input-subject > input,
     .contact__input-message > textarea {
-        width: auto;
-        min-width: 80%;
+        padding: 1rem;
+        width: 100%;
     }
     
+    
     .support-bench {
-        width:calc(100%-4rem);
+        width:20rem;
     }
     
     .footer__content {
@@ -1112,13 +1118,52 @@ body {
 }
 
 @media screen and (max-width:500px) {
+
+    .navbar__container{
+        margin: 1rem;
+        padding: 0;
+    }
+
+    .services__title-section, .features__title-section, .pricing__title-section, .team__title-section, .blog__title-section{
+        padding: 0;
+    }
+
+    .services__title, .features__title, .pricing__title, .team__title, .blog__title {
+        font-size: 1.7rem;
+        padding: .5rem;
+    }
+
+    .services__content{
+        padding: 2rem;
+    }
+
+    .features__list {
+        margin: 0;
+    }
+    
+    .dot-image2{
+        left: 50%;
+        bottom: 10%;
+    }
+    
     .features_image-main > img {
-        width: calc(100% - 5rem);
+        width: calc(100% - 2rem);
         margin: 0 0 5rem;
     }
     
     .dot-image1, .dot-image2 {
         width: calc(60% - 5rem);
         bottom: 10%;
+    }
+
+    .pricing__box-content{
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer__quickview{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 }
