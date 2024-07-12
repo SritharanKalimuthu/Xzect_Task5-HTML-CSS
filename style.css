@@ -23,10 +23,13 @@ body {
     position: fixed;
     top: 0;
     z-index: 99;
+    display: grid;
+    place-items: center;
 }
 
 .navbar__container {
-    margin: 1.4rem 7rem;
+    width: 70rem;
+    margin: 1.5rem ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,20 +78,29 @@ body {
     transform: translateY(-5%);
 }
 
+.hero,.services,.features,.pricing{
+    display: grid;
+    place-items: center;
+}
+
 .hero__container {
-    margin: 5rem 0 2rem 7rem;
+    width: 70rem;
+    margin: 5rem 0 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .hero__image > img {
+    position: relative;
     width: 100%;
     filter: drop-shadow(20px 10px 5px #6e6e6e);
+    overflow: hidden;
 }
 
 .hero__section {
     margin-top: 5rem;
+    margin-right: 2rem;
 }
 
 .hero__title {
@@ -121,11 +133,12 @@ body {
 }
 
 .services__container, .features__container, .pricing__container {
-    padding: 5rem 2rem;
+    width: 70rem;
+    padding:2rem;
 }
 
 .services__title-section, .features__title-section, .pricing__title-section, .team__title-section, .blog__title-section {
-    padding: 2rem 10rem;
+    padding: 2rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,7 +207,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 4rem 0 5rem;
+    margin: 4rem 0;
 }
 
 .features__content {
@@ -336,7 +349,7 @@ body {
 }
 
 .pricing__box {
-    padding: 3rem 5.5rem;
+    padding: 3rem 6rem;
     border-radius: 5px;
     box-shadow: rgba(27, 27, 27, 0.13) 0px 3px 8px;
 }
@@ -432,9 +445,15 @@ body {
 }
 
 .team {
+    display: grid;
+    place-items: center;
     background-color: #fbfbfb;
     padding: 0 4rem; 
     overflow-x: hidden;
+}
+
+.team__container{
+    width: 70rem;
 }
 
 .team__wrapper {
@@ -449,7 +468,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 4rem;
-    width: calc(100% - 3rem);
+    margin-right: 1rem;
     position: relative;
 }
 
@@ -509,17 +528,24 @@ body {
     margin-bottom: .5rem;
 }
 
+.blog{
+    display: grid;
+    place-items: center;
+}
+
+.blog__container{
+    width: 70rem;
+}
+
 
 .blog__list {
     display: flex;
     align-items: center;
-    padding: 0 4rem;
+    gap: 10px;
 }
 
 .blog__content {
     padding: 2rem;
-    width: calc(100% - 4rem);
-    margin: 1rem;
     border-radius: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -583,7 +609,7 @@ body {
 }
 
 .cta__container {
-    width: 85%;
+    width: 70rem;
     margin: auto;
 }
 
@@ -612,11 +638,13 @@ body {
 }
 
 .contact {
+    display: grid;
+    place-items: center;
     margin-bottom: 5rem;
 }
 
 .contact__container {
-    margin: 0 6rem 4rem;
+    width: 70rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -749,8 +777,13 @@ body {
 }
 
 .footer {
+    display: grid;
+    place-items: center;
     background-color: var(--bluish-grey);
-    padding: 0 5rem 2rem 0;
+}
+
+.footer__container{
+    width: 70rem;
 }
 
 .footer__content {
@@ -759,7 +792,7 @@ body {
 }
 
 .footer__title {
-    padding: 4rem;
+    padding: 4rem 0 0;
     width: 30%;
 }
 
@@ -811,20 +844,20 @@ body {
 }
 
 
-@media screen and (max-width:1100px){
-    
-    .navbar__container {
-        margin: 1.5rem 2rem 1.5rem 4rem;
+@media screen and (max-width:1175px){
+
+    .navbar,.hero,.services,.features,.pricing,.team,.blog,.cta,.contact,.footer{
+        display: inline-block;
+    }
+
+    .navbar__container,.hero__container,.services__container,.features__container,.pricing__container,.team__container,.blog__container,.cta__container,.contact__container,.footer__container{
+        width: auto;
     }
     
     .hero__container {
         margin: 5rem 0 2rem 4rem;
     }
 
-    .hero__image > img {
-        width: 90%;
-    }
-    
     .services__title-section, .features__title-section, .pricing__title-section, .team__title-section, .blog__title-section {
         padding: 2rem 5rem;
     }
@@ -876,11 +909,11 @@ body {
     }
 
     .team {
-        padding: 0 3rem; 
+        padding: 0 2rem; 
     }
-    
-    .team__people {
-        width: calc(100% - 2rem);
+
+    .team__people{
+        max-width: 20rem;
     }
 
     .team__people-name {
@@ -895,9 +928,6 @@ body {
         padding: 0 3rem;
     }
     
-    .blog__content {
-        width: calc(100% - 2rem);
-    }
     
     .cta__description {
         padding: 0 1rem;
@@ -923,6 +953,7 @@ body {
 }
 
 @media screen and (max-width:974px) {
+
     .navbar__list {
         display:none;
     }
@@ -1006,6 +1037,10 @@ body {
     .demo__content-description {
         padding: 2rem;
     }
+
+    .pricing__container{
+        padding: .4rem;
+    }
     
     .pricing__table {
         flex-direction: column;
@@ -1041,9 +1076,7 @@ body {
     
     .team__people {
         margin: 1rem;
-        width: 10rem;
     }
-    
     
     .blog__list {
         flex-direction: column;
@@ -1155,6 +1188,7 @@ body {
         width: calc(60% - 5rem);
         bottom: 10%;
     }
+    
 
     .pricing__box-content{
         margin: 0;
